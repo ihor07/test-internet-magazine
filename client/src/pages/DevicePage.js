@@ -1,7 +1,7 @@
 import React from 'react'
 
 const DevicePage = () => {
-  return <div>DevicePage</div>
+  return <div>devicePage</div>
 }
 
 export default DevicePage

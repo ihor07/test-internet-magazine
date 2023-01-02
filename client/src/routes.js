@@ -1,13 +1,16 @@
-import { Component } from 'react'
 import Admin from './pages/Admin'
 import Basket from './pages/Basket'
+import DevicePage from './pages/DevicePage'
+import Auth from './pages/Auth'
+import Shop from './pages/Shop'
+
 import {
   ADMIN_ROUTE,
-  BASKET_ROUTE,
-  DEVICE_ROUTE,
   LOGIN_ROUTE,
   REGISTRATION_ROUTE,
   SHOP_ROUTE,
+  DEVICE_ROUTE,
+  BASKET_ROUTE,
 } from './utils/consts'
 
 export const authRoutes = [
@@ -24,18 +27,18 @@ export const authRoutes = [
 export const publicRoutes = [
   {
     path: LOGIN_ROUTE,
-    Component: Login,
+    Component: Auth,
   },
   {
     path: REGISTRATION_ROUTE,
-    Component: Basket,
-  },
-  {
-    path: SHOP_ROUTE,
-    Component: Basket,
+    Component: Auth,
   },
   {
     path: DEVICE_ROUTE + '/:id',
-    Component: Basket,
+    Component: DevicePage,
+  },
+  {
+    path: SHOP_ROUTE,
+    Component: Shop,
   },
 ]
